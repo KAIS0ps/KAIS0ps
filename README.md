@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="./assets/banner.svg" alt="KAIS0ps - Software Architecture, Web Engineering &amp; Open-Source Security Research" width="100%" />
-</p>
-
 ## Software Architecture, Web Engineering & Security Research
 
 Senior Software Architect, Full-Stack Developer, and Independent Security Researcher with **20+ years of experience** designing, building, and securing web platforms, distributed backends, and high-performance software systems across **TypeScript / Node.js, PHP, Rust, Python, and Go**.
