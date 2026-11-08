@@ -4,7 +4,7 @@
 
 ## Independent Security Research & Systems Engineering
 
-`KAIS0ps` is a dedicated research handle for smart contract auditing, application security research, and defensive Rust tooling. Work focuses on static source-to-sink taint analysis, protocol conservation invariants, and coordinated vulnerability disclosure across decentralized finance (`DeFi`) protocols and open-source web software.
+`KAIS0ps` is a dedicated handle for smart contract security auditing, application vulnerability research, and defensive systems engineering. Alongside full-stack architecture of proprietary commerce and financial backends, public work here focuses on static source-to-sink taint analysis, protocol conservation invariants, modular safe Rust libraries, and coordinated vulnerability disclosure (`CVD`).
 
 ---
 
@@ -15,6 +15,16 @@
 | **Smart Contracts & DeFi Protocols** | `Solidity` (`EVM`) and `Rust` (`NEAR`) protocols: `ERC-4626` / `ERC-7540` vaults, lending and liquidation engines, cross-chain intent bridges, oracle feeds, and multi-decimal token accounting | Local `Foundry` (`forge test`) and `cargo test` PoCs against unmodified upstream commits, verifying conservation of value, keeper liveness, and realistic market bounds |
 | **Modular Rust & Cryptographic Primitives** | Zero-dependency verification crates, constant-time `HMAC-SHA256` authentication, `EIP-712` / webhook replay bounds, and 256-bit fixed-point arithmetic | `#![forbid(unsafe_code)]`, strict `clippy` gates, deterministic boundary tests, and narrow module interfaces |
 | **Web Platforms, APIs & Open-Source CMS** | `TypeScript` / `Node.js`, `PHP` (`WordPress`, `WooCommerce`, `OpenCart`), `Go`, and `Python` backends: SQL injection, broken access control, privilege escalation, SSRF, and unsafe deserialization | Isolated local reproduction harnesses, `CVSS v3.1` root-cause traces, and clean upstream `.diff` fixes |
+
+---
+
+### Production Systems Engineered (Proprietary)
+
+Hands-on security auditing is grounded in architecting and operating closed-source production systems across high-concurrency financial and web workloads:
+
+- **Crypto & Digital Asset Commerce Monorepos (`Next.js`, `NestJS`, `Turborepo`, `PostgreSQL`, `BullMQ`):** Multi-gateway fiat and multi-chain cryptocurrency settlement pipelines built around double-entry ledger accounting, `AES-256-GCM` encrypted fulfillment vaults, deterministic `HMAC` blind indexing for searchable encrypted PII, and idempotent webhook workers.
+- **Merchant Verification & High-Integrity Review Platforms (`TypeScript`, `Prisma`, `PostgreSQL`):** Domain-claim verification state machines with hashed OTP attempt counters, instant `tokenVersion` session invalidation, `TOCTOU`-safe atomic reward claim locking, and automated anti-spam validation pipelines.
+- **Low-Latency Execution & Risk Engines (`Rust`, `Python`, `PyO3`):** Deterministic exposure and drawdown circuit breakers, `Ed25519`-signed streaming market connectors, and lock-free `SeqLock` shared-memory bridges.
 
 ---
 
