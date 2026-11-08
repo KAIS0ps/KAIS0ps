@@ -6,11 +6,12 @@
 
 ### Audit Scope & Engineering Focus
 
-| Domain | Target Surfaces | Verification Approach |
-|---|---|---|
-| **Smart Contracts & DeFi Protocols** | `Solidity` (`EVM`) and `Rust` (`NEAR`) protocols: `ERC-4626` / `ERC-7540` vaults, lending and liquidation engines, cross-chain intent bridges, oracle feeds, and multi-decimal token accounting | Local `Foundry` (`forge test`) and `cargo test` PoCs against unmodified upstream commits, verifying conservation of value, keeper liveness, and realistic market bounds |
-| **Modular Rust & Cryptographic Primitives** | Zero-dependency verification crates, constant-time `HMAC-SHA256` authentication, `EIP-712` / webhook replay bounds, and 256-bit fixed-point arithmetic | `#![forbid(unsafe_code)]`, strict `clippy` gates, deterministic boundary tests, and narrow module interfaces |
-| **Web Platforms, APIs & Open-Source CMS** | `TypeScript` / `Node.js`, `PHP` (`WordPress`, `WooCommerce`, `OpenCart`), `Go`, and `Python` backends: SQL injection, broken access control, privilege escalation, SSRF, and unsafe deserialization | Isolated local reproduction harnesses, `CVSS v3.1` root-cause traces, and clean upstream `.diff` fixes |
+- **Smart Contracts & DeFi Protocols (`Solidity` / `EVM`, `Rust` / `NEAR`):**
+  Auditing `ERC-4626` and `ERC-7540` vaults, lending and liquidation engines, cross-chain intent bridges, oracle feeds, and multi-decimal token accounting. Every finding is verified via local `Foundry` (`forge test`) or `cargo test` PoCs against unmodified upstream commits across realistic market bounds and active keeper conditions.
+- **Modular Rust & Cryptographic Primitives:**
+  Building zero-dependency `#![forbid(unsafe_code)]` verification crates, constant-time `HMAC-SHA256` authenticators, `EIP-712` and webhook replay guards, and full-width 256-bit fixed-point math verified under strict `clippy` and boundary test suites.
+- **Web Platforms, APIs & Open-Source CMS (`TypeScript`, `PHP`, `Go`, `Python`):**
+  Manual source-to-sink taint auditing across `Node.js` APIs, `WordPress`, `WooCommerce`, and `OpenCart` codebases covering SQL injection, broken access control, privilege escalation, SSRF, and unsafe deserialization, delivered with isolated reproduction tests and clean `.diff` fixes.
 
 ---
 
