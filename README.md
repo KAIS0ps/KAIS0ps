@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="./assets/banner.svg" alt="KAIS0ps Security Research" width="100%" />
-</p>
-
 ## Independent Security Research & Systems Engineering
 
 `KAIS0ps` is a dedicated handle for smart contract security auditing, application vulnerability research, and defensive systems engineering. Alongside full-stack architecture of proprietary commerce and financial backends, public work here focuses on static source-to-sink taint analysis, protocol conservation invariants, modular safe Rust libraries, and coordinated vulnerability disclosure (`CVD`).
